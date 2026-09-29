@@ -1,0 +1,38 @@
+[package]
+name = "teamserver"
+version = "0.2.15"
+edition = "2024"
+
+
+
+
+
+
+
+
+
+[dependencies]
+tokio = { version = "1.44", features = ["full"] }
+tonic = "0.12.3"
+prost = "0.13.5"
+sqlx = { version = "0.8.3", features = ["runtime-tokio-rustls", "sqlite", "postgres"] }
+anyhow = "1.0.96"
+async-trait = "0.1.87"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["fmt", "env-filter", "json", "chrono"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+uuid = { version = "1.15.1", features = ["v4", "serde"] }
+rand = "0.9.0"
+chrono = { version = "0.4.40", features = ["serde"] }
+rustls = { version = "0.23.37", features = ["aws-lc-rs"] }
+axum = "0.8.1"
+axum-server = { version = "0.7.1", features = ["tls-rustls"] }
+tower-http = { version = "0.6.2", features = ["fs", "trace"] }
+clap = { version = "4.5.31", features = ["derive"] }
+rcgen = "0.13.2"
+base64 = "0.22.1"
+tokio-util = { version = "0.7.12", features = ["full"] }
+hickory-server = "0.24.1"
+hickory-proto = "0.24.1"
+data-encoding = "2.8.0"

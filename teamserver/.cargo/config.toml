@@ -1,0 +1,4 @@
+[build]
+# Store build artifacts on the Linux filesystem to avoid DrvFs permission/locking issues on /mnt/c/.
+# This significantly improves build speeds and resolves AccessDenied errors.
+target-dir = "/tmp/lockjaw_target"
