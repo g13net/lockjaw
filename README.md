@@ -142,6 +142,27 @@ BOF support has not been tested.
 - **Python 3** with `requests` and `prompt_toolkit` — for the Operator CLI
 - **Binutils / objcopy** — required when generating raw `.bin` shellcode payloads
 
+### Kali Linux Setup
+```bash
+sudo apt update
+sudo apt install -y curl build-essential binutils python3 python3-venv
+
+# Install Rust & Cargo
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+
+# Install Zig Compiler (v0.15.2)
+wget https://ziglang.org/download/0.15.2/zig-linux-x86_64-0.15.2.tar.xz
+tar xf zig-linux-x86_64-0.15.2.tar.xz
+sudo mv zig-linux-x86_64-0.15.2 /opt/zig
+sudo ln -s /opt/zig/zig /usr/local/bin/zig
+
+# Setup Python CLI dependencies
+python3 -m venv venv
+source venv/bin/activate
+pip install requests prompt_toolkit
+```
+
 ### Building the Teamserver
 ```bash
 cd teamserver
