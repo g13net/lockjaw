@@ -1,0 +1,13 @@
+# Build artifacts
+teamserver/target/
+implant/zig-out/
+implant/.zig-cache/
+lockjaw_debug.log
+.DS_Store
+*.exe
+*.dll
+*.ps1
+lockjaw.db
+*.db
+*.log
+teamserver/*.db
